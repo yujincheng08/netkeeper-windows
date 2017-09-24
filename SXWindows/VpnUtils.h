@@ -27,7 +27,7 @@ public:
 
 		pras->dwVpnStrategy = VS_L2tpOnly;
 		pras->dwfOptions |= RASEO_RequireCHAP | RASEO_RequirePAP;
-		pras->dwfOptions2 |= RASEO2_DisableIKENameEkuCheck;
+		pras->dwfOptions2 |= RASEO2_DisableNbtOverIP;
 		RasSetEntryProperties(NULL, name.c_str(), pras, pras->dwSize, NULL, 0);
 		RASCREDENTIALS ras_cre = { 0 };
 		ras_cre.dwSize = sizeof(ras_cre);
